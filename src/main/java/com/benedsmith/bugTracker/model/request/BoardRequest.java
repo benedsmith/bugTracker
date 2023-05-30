@@ -1,5 +1,8 @@
 package com.benedsmith.bugTracker.model.request;
 
+import lombok.Data;
+
+@Data
 public class BoardRequest {
     String name;
 

@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TicketController extends JpaRepository<Ticket, String> {
+public interface TicketRepository extends JpaRepository<Ticket, String> {
+    List<Ticket> findByBoardid(String boardid);
 
     @Override
     List<Ticket> findAllById(Iterable<String> strings);
